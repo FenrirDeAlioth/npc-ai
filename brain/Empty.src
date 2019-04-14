@@ -1,0 +1,39 @@
+// Ultima BR
+// Author: Fenrir
+
+use uo;
+use os;
+use npc;
+
+include ":ai:core/core";
+
+// include configurators
+// include initializers
+
+include ":ai:core/state";
+include ":ai:sleep/state/default";
+// include states
+// include state decorators
+
+include ":ai:core/transition";
+//include ":ai:sleep/transition/idle";
+// include transitions
+// include transition decorators
+
+/* 
+ * Description
+ *   Artificial Intelligence
+ */
+program AiBrainEmpty()
+
+    AiStart();
+
+    do
+
+        AiStateExecute();
+
+        AiTransitionExecute();
+
+    dowhile (!me.dead);
+
+endprogram
